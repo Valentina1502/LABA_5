@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
+"""
+Написать функцию, вычисляющую среднее
+гармоническое своих аргументов
+"""
+
+
 def G(*args):
     if args:
         # list comprehension (генератр списков)
@@ -9,15 +16,13 @@ def G(*args):
         n = len(values)
         i, summ = 0, 0
         for i, value in enumerate(values, 0):
-            summ += 1/value
-        garm = n/summ
-        garm = '{:.4f}'.format(garm)
+            summ += 1 / value
+        garm = n / summ
         return garm
     else:
         return None
 
 
 if __name__ == "__main__":
-    print('Введите через прбел аргументы для расчетов')
-    ar = input().split()
-    print(G(*ar))
+    ar = input('Введите аргументы:\n').split()
+    print('Среднее гармоническое: ', G(*ar))

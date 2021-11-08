@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
+"""
+Написать функцию, вычисляющую среднее
+геометрическое своих аргументов
+"""
+
+
 def G(*args):
     if args:
-        # list comprehension (генератр списков)
-        values = [int(arg) for arg in args]
-
-        n = len(values)
-        i, p = 1, 1
-        for i, value in enumerate(values, 0):
-            p *= value
-        g = pow(p, (1/(n)))
-        g = '{:.4f}'.format(g)
-        return g
+        p = 1
+        for i in args:
+            p *= i
+        p = p ** (1 / len(args))
+        return p
     else:
         return None
 
 
 if __name__ == "__main__":
-    print('Введите через прбел аргументы для расчетов')
-    ar = input().split()
-    print(G(*ar))
+    ar = list(map(int, input('Введите данные:\n').split()))
+    print('Среднее геометрическое', G(*ar))

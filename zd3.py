@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
+"""
+Задан список котов и их вес в килограммах.
+Необходимо определить самого крупного
+кота и средний вес каждого
+"""
+
+
 def cat(**kwargs):
     sum, sr = 0, 0
     n = len(kwargs)
@@ -11,7 +19,6 @@ def cat(**kwargs):
             max = kwargs[items]
             name = items
     sr = sum / n
-    sr = '{:.2f}'.format(sr)
 
     print(f'Самый толстый кот - {name} - весит {max} кг')
     print(f'В среднем каждый кот весит {sr} кг')

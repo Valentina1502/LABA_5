@@ -19,5 +19,5 @@ def median(*args):
 
 if __name__ == "__main__":
     print(median())
-print(median(3, 7, 1, 6, 9))
-print(median(1, 5, 8, 4, 3, 9))
+    print(median(3, 7, 1, 6, 9))
+    print(median(1, 5, 8, 4, 3, 9))
