@@ -3,8 +3,8 @@
 
 
 """
-Написать функцию, вычисляющую среднее геометрическое
-своих аргументов
+Написать функцию, вычисляющую сумму аргументов,
+расположенных после первого положительного аргумента
 """
 
 
@@ -12,9 +12,9 @@ def G(*args):
     if args:
         summ = 0
         for i, value in enumerate(args):
-            if int(value) > 0:
+            if float(value) > 0:
                 for value2 in args[i + 1:]:
-                    summ += int(value2)
+                    summ += float(value2)
                 return summ
     else:
         return None
