@@ -20,7 +20,6 @@ def cat(**kwargs):
     sr = sum / n
     return (sr, max, name)
 
-
 if __name__ == '__main__':
     ca = cat(
         Афина=7.1,
