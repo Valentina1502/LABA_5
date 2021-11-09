@@ -7,7 +7,6 @@
 кота и средний вес каждого
 """
 
-
 def cat(**kwargs):
     sum, sr = 0, 0
     n = len(kwargs)
@@ -19,6 +18,7 @@ def cat(**kwargs):
             name = items
     sr = sum / n
     return (sr, max, name)
+
 
 if __name__ == '__main__':
     ca = cat(
